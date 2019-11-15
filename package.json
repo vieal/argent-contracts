@@ -8,6 +8,7 @@
   "scripts": {
     "compile": "npx etherlime compile --runs=200",
     "ganache": "npx etherlime ganache --gasLimit=10700000 -e 10000",
+    "kovan-fork": "npx ganache-cli --gasLimit=10700000 -e 10000 -k istanbul -d -f https://kovan.infura.io/v3/$(cat .env | sed -En 's/KOVAN_INFURA_KEY=''\"''([^''\"'']+)''\"''/\\1/p')",
     "test": "npx etherlime test --skip-compilation",
     "ctest": "npm run compile && npm run test"
   },
@@ -31,6 +32,7 @@
     "etherlime": "^2.2.4",
     "etherlime-lib": "^1.1.3",
     "ethers": "^4.0.28",
+    "ganache-cli": "^6.8.0-istanbul.0",
     "node-fetch": "^2.3.0",
     "openzeppelin-solidity": "^2.2.0",
     "ps-node": "^0.1.6",
