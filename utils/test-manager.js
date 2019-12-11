@@ -68,7 +68,7 @@ class TestManager {
         return '0x' + ethers.utils.hexZeroPad(ethers.utils.hexlify(block), 16).slice(2) + ethers.utils.hexZeroPad(ethers.utils.hexlify(timestamp), 16).slice(2);
     }
 
-    async relay(_target, _method, _params, _wallet, _signers, _relayer = this.accounts[9].signer, _estimate = false, _gasLimit = 700000) {
+    async relay(_target, _method, _params, _wallet, _signers, _relayer = this.accounts[9].signer, _estimate = false, _gasLimit = 2000000) {
         const nonce = await this.getNonceForRelay();
         const methodData = _target.contract.interface.functions[_method].encode(_params);
         const signatures = await signOffchain(_signers, _target.contractAddress, _wallet.contractAddress, 0, methodData, nonce, 0, _gasLimit);

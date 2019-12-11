@@ -27,6 +27,8 @@ bin
 *.sh
 utils/config/*.json
 !utils/config/ganache.json
+!utils/config/kovan.json
+!utils/config/kovan-fork.json
 
 ## Etherlime
 **/.etherlime-store
