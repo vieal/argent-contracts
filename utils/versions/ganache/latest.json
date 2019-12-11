@@ -1,1 +1,47 @@
-{"version":"1.4.0","createdAt":1573759557,"modules":[{"address":"0x79B960d71977082d1e273e9190a5EF9783fFa24d","name":"GuardianManager"},{"address":"0x776A4C0925C9F67ef4395238B22dc875fC88Dc0E","name":"LockManager"},{"address":"0x16DBb3F310960e13F2b80c3cc8166cF6D9FeDBf8","name":"RecoveryManager"},{"address":"0x963D5B228d5Fa7DE3d69F636704Cf5070d41A760","name":"TokenExchanger"},{"address":"0x09628ee377BC0D20F1D7917bC22074fB9c7385E7","name":"NftTransfer"},{"address":"0x8a250e6c1C94d494611EeB49b75fa72A1f6E619D","name":"MakerManager"},{"address":"0xd01e8b19b380C81e1256fDd479D9BA1dc2808Bf4","name":"CompoundManager"},{"address":"0x61Ad04A239673dD727455348D009EA162098BaDE","name":"UniswapManager"},{"address":"0x626A72d22809C6a1836A140340758171e6AaAB86","name":"TransferManager"},{"address":"0x19237aE7cD944ce26eA833213a32B32C67AC0624","name":"ApprovedTransfer"}],"fingerprint":"0x6cb9e231"}
+{
+    "version": "1.4.0",
+    "createdAt": 1573759557,
+    "modules": [
+        {
+            "address": "0x79B960d71977082d1e273e9190a5EF9783fFa24d",
+            "name": "GuardianManager"
+        },
+        {
+            "address": "0x776A4C0925C9F67ef4395238B22dc875fC88Dc0E",
+            "name": "LockManager"
+        },
+        {
+            "address": "0x16DBb3F310960e13F2b80c3cc8166cF6D9FeDBf8",
+            "name": "RecoveryManager"
+        },
+        {
+            "address": "0x963D5B228d5Fa7DE3d69F636704Cf5070d41A760",
+            "name": "TokenExchanger"
+        },
+        {
+            "address": "0x09628ee377BC0D20F1D7917bC22074fB9c7385E7",
+            "name": "NftTransfer"
+        },
+        {
+            "address": "0x8a250e6c1C94d494611EeB49b75fa72A1f6E619D",
+            "name": "MakerManager"
+        },
+        {
+            "address": "0xd01e8b19b380C81e1256fDd479D9BA1dc2808Bf4",
+            "name": "CompoundManager"
+        },
+        {
+            "address": "0x61Ad04A239673dD727455348D009EA162098BaDE",
+            "name": "UniswapManager"
+        },
+        {
+            "address": "0x626A72d22809C6a1836A140340758171e6AaAB86",
+            "name": "TransferManager"
+        },
+        {
+            "address": "0x19237aE7cD944ce26eA833213a32B32C67AC0624",
+            "name": "ApprovedTransfer"
+        }
+    ],
+    "fingerprint": "0x6cb9e231"
+}

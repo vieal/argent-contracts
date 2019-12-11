@@ -3,7 +3,6 @@ pragma solidity ^0.5.4;
 import "./common/BaseModule.sol";
 import "./common/RelayerModule.sol";
 import "./common/OnlyOwnerModule.sol";
-import "../storage/GuardianStorage.sol";
 import "../utils/SafeMath.sol";
 import "../defi/Loan.sol";
 import "../defi/Invest.sol";
@@ -157,7 +156,7 @@ contract MakerV2Manager is Loan, Invest, BaseModule, RelayerModule, OnlyOwnerMod
         require(_wallet.authorised(msg.sender), "MV2: sender unauthorized");
         _;
     }
-
+    
     // *************** Constructor ********************** //
 
     constructor(
@@ -169,10 +168,9 @@ contract MakerV2Manager is Loan, Invest, BaseModule, RelayerModule, OnlyOwnerMod
         MakerRegistry _makerRegistry,
         IUniswapFactory _uniswapFactory
     )
-        BaseModule(_registry, NAME)
+        BaseModule(_registry, _guardianStorage, NAME)
         public
     {
-        guardianStorage = _guardianStorage;
         scdMcdMigration = address(_scdMcdMigration);
         cdpManager = _scdMcdMigration.cdpManager();
         tub = _scdMcdMigration.tub();

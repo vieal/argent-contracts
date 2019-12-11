@@ -50,7 +50,7 @@ class DeployManager {
 
         // setting deployer
         if (config.settings.deployer.type === 'ganache') {
-            this.deployer = new etherlime.EtherlimeGanacheDeployer(pkey); // will use etherlime accounts if pkey is undefined
+            this.deployer = new etherlime.EtherlimeGanacheDeployer(pkey, 8545, { gasLimit: 6000000 }); // will use etherlime accounts if pkey is undefined
         } else if (config.settings.deployer.type === 'infura') {
             const { network, key, envvar } = config.settings.deployer.options;
             this.deployer = new etherlime.InfuraPrivateKeyDeployer(pkey, network, key || process.env[envvar], defaultConfigs);
