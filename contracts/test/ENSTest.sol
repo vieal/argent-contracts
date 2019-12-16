@@ -194,7 +194,7 @@ contract TestReverseRegistrar is ENSReverseRegistrar {
      * @return The SHA3 hash of the lower-case hexadecimal encoding of the
      *         input address.
      */
-    function sha3HexAddress(address addr) private returns (bytes32 ret) {
+    function sha3HexAddress(address addr) private pure returns (bytes32 ret) {
         assembly {
             let lookup := 0x3031323334353637383961626364656600000000000000000000000000000000
             let i := 40

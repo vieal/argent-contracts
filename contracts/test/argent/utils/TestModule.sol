@@ -34,7 +34,7 @@ contract TestModule is BaseModule, RelayerModule {
         return uintVal;
     }
 
-    function getAddress(address _addr) public view returns (address) {
+    function getAddress(address _addr) public pure returns (address) {
         return _addr;
     }
 
