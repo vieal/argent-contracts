@@ -11,7 +11,6 @@ const NftTransfer = require('../build/NftTransfer');
 const MakerManager = require('../build/MakerManager');
 const CompoundManager = require('../build/CompoundManager');
 const UniswapManager = require('../build/UniswapManager');
-const MakerV2Manager = require('../build/MakerV2Manager');
 
 const utils = require('../utils/utilities.js');
 
@@ -46,7 +45,6 @@ const deploy = async (network, secret) => {
     const MakerManagerWrapper = await deployer.wrapDeployedContract(MakerManager, config.modules.MakerManager);
     const CompoundManagerWrapper = await deployer.wrapDeployedContract(CompoundManager, config.modules.CompoundManager);
     const UniswapManagerWrapper = await deployer.wrapDeployedContract(UniswapManager, config.modules.UniswapManager);
-    const MakerV2ManagerWrapper = await deployer.wrapDeployedContract(MakerV2Manager, config.modules.MakerV2Manager);
 
     const ModuleRegistryWrapper = await deployer.wrapDeployedContract(ModuleRegistry, config.contracts.ModuleRegistry);
     const MultiSigWrapper = await deployer.wrapDeployedContract(MultiSig, config.contracts.MultiSigWallet);
@@ -61,8 +59,7 @@ const deploy = async (network, secret) => {
         NftTransferWrapper,
         MakerManagerWrapper,
         CompoundManagerWrapper,
-        UniswapManagerWrapper,
-        MakerV2ManagerWrapper
+        UniswapManagerWrapper
     ];
 
     ////////////////////////////////////

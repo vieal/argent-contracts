@@ -1,16 +1,16 @@
 const Ajv = require('ajv');
 
-const ajv = Ajv({allErrors: true});
+const ajv = Ajv({ allErrors: true });
 
 const schema = require('./config-schema.json');
 
 class Configurator {
     constructor(loader) {
-      this.loader = loader;
+        this.loader = loader;
     }
 
     get config() {
-      return this._config;
+        return this._config;
     }
 
     copyConfig() {
@@ -37,6 +37,10 @@ class Configurator {
 
     updateMakerMigration(address) {
         this._config.defi.maker.migration = address;
+    }
+
+    updateUniswapFactory(address) {
+        this._config.defi.uniswap.factory = address;
     }
 
     updateBackendAccounts(accounts) {
@@ -72,6 +76,6 @@ class Configurator {
             throw new Error("Configuration is not valid");
         }
     }
-  }
+}
 
 module.exports = Configurator;

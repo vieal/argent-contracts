@@ -20,7 +20,9 @@ const BACKWARD_COMPATIBILITY = 5;
 const deploy = async (network) => {
 
     if (!['kovan', 'kovan-fork', 'staging', 'prod'].includes(network)) {
-        throw new Error(`The MakerManagerV2 module cannot currently be deployed on ${network}`)
+        console.warn(`------------------------------------------------------------------------`)
+        console.warn(`WARNING: The MakerManagerV2 module is not fully functional on ${network}`)
+        console.warn(`------------------------------------------------------------------------`)
     }
 
     const newModuleWrappers = [];
