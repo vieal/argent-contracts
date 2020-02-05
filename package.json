@@ -6,7 +6,7 @@
     "test": "test"
   },
   "scripts": {
-    "compile": "npx etherlime compile --runs=200",
+    "compile": "npx etherlime compile --runs=999",
     "ganache": "npx etherlime ganache --gasLimit=10700000 -e 10000",
     "kovan-fork": "npx ganache-cli --gasLimit=10700000 -f https://kovan.infura.io/v3/$(cat .env | sed -En 's/KOVAN_INFURA_KEY=''\"''([^''\"'']+)''\"''/\\1/p')@15487941",
     "kovan-fork-latest": "npx ganache-cli --gasLimit=10700000 -f https://kovan.infura.io/v3/$(cat .env | sed -En 's/KOVAN_INFURA_KEY=''\"''([^''\"'']+)''\"''/\\1/p')",
