@@ -8,6 +8,7 @@
   "scripts": {
     "compile": "npx etherlime compile --runs=999",
     "ganache": "npx etherlime ganache --gasLimit=10700000 -e 10000",
+    "fork:mainnet": "npx etherlime ganache --fork https://mainnet.infura.io/v3/735489d9f846491faae7a31e1862d24b",
     "test": "npx etherlime test --skip-compilation",
     "ctest": "npm run compile && npm run test"
   },
