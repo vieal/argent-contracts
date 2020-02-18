@@ -11,6 +11,7 @@
     "ganache": "npx etherlime ganache --gasLimit=10700000 -e 10000",
     "test": "npx etherlime test --skip-compilation",
     "ctest": "npm run compile && npm run test",
+    "test:deployment12": "npx etherlime deploy --file ./deployment/1_setup_test_environment.js --network ganache --compile false && npx etherlime deploy --file ./deployment/2_deploy_contracts.js --network ganache --compile false",
     "test:deployment": "./deploy.sh ganache `seq 1 7`"
   },
   "repository": {
